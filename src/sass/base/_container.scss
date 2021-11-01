@@ -1,0 +1,10 @@
+.container {
+  @include paddings($pr: $padding, $pl: $padding);
+  @include mq($mobile, $mr: auto, $ml: auto) {
+    max-width: map-get($breakpoints, $mobile) + 2 * $padding;
+  }
+
+  @include mq($tablet) {
+    max-width: map-get($breakpoints, $tablet) + 2 * $padding;
+  }
+}

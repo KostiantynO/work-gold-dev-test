@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+
+  @include mq($end: $tablet) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @include mq($tablet) {
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+}
+
+.header__logo-thumb {
+  margin-bottom: 8px;
+}
+
+.menu__link {
+  font-family: var(--secondary-font-bold);
+  @include font(11px, 700, 13px);
+
+  text-align: center;
+  text-transform: uppercase;
+}

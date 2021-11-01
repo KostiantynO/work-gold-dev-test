@@ -1,0 +1,4 @@
+.section {
+  @include paddings($pt: 30px, $pb: 30px);
+  @include mq($tablet, $pt: 50px, $pb: 50px);
+}

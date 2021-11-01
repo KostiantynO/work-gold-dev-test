@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Ogg-Roman';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ogg'), local('Ogg-Roman'),
+    url('../fonts/Ogg-Roman.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TradeGothicLTStd Extended';
+  font-style: normal;
+  font-weight: 400;
+  src: local('TradeGothicLTStd, Extended'), local('TradeGothicLTStd-Extended'),
+    local('TradeGothicLTStd Extended'),
+    url('../fonts/TradeGothicLTStd-Extended.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TradeGothicLTStd BoldExt';
+  font-style: normal;
+  font-weight: 700;
+  src: local('TradeGothicLTStd, BoldExt'), local('TradeGothicLTStd-BoldExt'),
+    local('TradeGothicLTStd BoldExt'),
+    url('../fonts/TradeGothicLTStd-BoldExt.otf') format('opentype');
+}

@@ -1,0 +1,24 @@
+html {
+  min-height: 100%;
+  overflow-y: scroll;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+body {
+  position: relative;
+
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+
+  font-family: var(--main-font), sans-serif;
+  font-size: 16px;
+  color: var(--color-primary);
+
+  &.no-scroll {
+    overflow-y: scroll;
+  }
+}
