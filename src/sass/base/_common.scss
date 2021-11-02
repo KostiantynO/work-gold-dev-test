@@ -23,6 +23,7 @@ ol {
 
 ul,
 ol {
+  list-style: none;
   padding-left: 0;
 }
 
@@ -36,4 +37,15 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  appearance: none;
+}
+
+svg {
+  max-height: 100%;
 }

@@ -1,4 +1,34 @@
+.header {
+  position: relative;
+}
+
+.safety-message {
+  font-family: var(--secondary-font);
+
+  @include font(8.4px, $lh: 12px);
+  text-align: center;
+
+  background-color: var(--color-footer-bg);
+
+  @include mq($end: $mobile, $mb: 5px);
+
+  @include mq($tablet, $mb: 33px) {
+    @include font(12px, $lh: 17px);
+  }
+}
+
+.top-row {
+  @include mq($end: $tablet, $mb: 2px);
+  @include mq($tablet, $mb: 10px);
+}
+
+.top-row__list {
+  display: flex;
+}
+
 .menu {
+  @extend %list;
+
   display: flex;
 
   @include mq($end: $tablet) {
@@ -6,7 +36,7 @@
     gap: 20px;
   }
 
-  @include mq($tablet) {
+  @include mq($tablet, $mb: 42px) {
     flex-wrap: wrap;
     gap: 35px;
   }

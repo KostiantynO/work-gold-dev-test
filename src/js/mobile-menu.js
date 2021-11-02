@@ -1,8 +1,8 @@
 export const initMobileMenu = () => {
   const refs = {
-    menu: backdrop.querySelector('[mobile-menu]'),
-    openMenuBtn: backdrop.querySelector('[mobile-menu-open]'),
-    closeMenuBtn: backdrop.querySelector('[mobile-menu-close]'),
+    menu: document.querySelector('[mobile-menu]'),
+    openMenuBtn: document.querySelector('[mobile-menu-open]'),
+    closeMenuBtn: document.querySelector('[mobile-menu-close]'),
     htmlAndBody: document.querySelectorAll('[no-scroll]'),
   };
 
