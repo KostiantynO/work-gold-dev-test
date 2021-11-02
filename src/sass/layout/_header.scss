@@ -1,16 +1,24 @@
 .header {
   position: relative;
+
+  padding-bottom: 32px;
+  @include mq($tablet, $pb: 42px);
+}
+
+.safety-message-wrapper {
+  background-color: var(--color-footer-bg);
 }
 
 .safety-message {
   font-family: var(--secondary-font);
 
-  @include font(8.4px, $lh: 12px);
   text-align: center;
 
-  background-color: var(--color-footer-bg);
+  @include paddings($pt: 8px, $pb: 7px);
 
-  @include mq($end: $mobile, $mb: 5px);
+  @include mq($end: $tablet, $mb: 5px) {
+    @include font(8.4px, $lh: 12px);
+  }
 
   @include mq($tablet, $mb: 33px) {
     @include font(12px, $lh: 17px);
@@ -18,32 +26,86 @@
 }
 
 .top-row {
-  @include mq($end: $tablet, $mb: 2px);
-  @include mq($tablet, $mb: 10px);
+  display: flex;
 }
 
 .top-row__list {
   display: flex;
+  gap: 3px;
+
+  margin-left: auto;
+
+  @include mq($end: $tablet, $mb: 10px);
+  @include mq($tablet, $mb: 2px) {
+    gap: 5px;
+  }
+}
+
+.header__logo-thumb {
+  margin-bottom: 8px;
+}
+
+.header__logo {
+  @extend %svg;
+
+  margin: 0 auto;
+}
+
+.tagline-thumb {
+  @include mq($tablet, $mb: 20px);
 }
 
 .menu {
   @extend %list;
 
   display: flex;
+  justify-content: center;
+
+  &.visually-hidden {
+    @include mq($tablet) {
+      pointer-events: initial;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 
   @include mq($end: $tablet) {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 5px;
   }
 
-  @include mq($tablet, $mb: 42px) {
+  @include mq($tablet) {
     flex-wrap: wrap;
-    gap: 35px;
+  }
+
+  @include mq($tablet, $desktop) {
+    gap: 12px;
   }
 }
 
-.header__logo-thumb {
-  margin-bottom: 8px;
+.menu__item {
+  @include mq($tablet, $desktop) {
+    &:nth-last-child(n) {
+      margin-right: 0;
+    }
+  }
+
+  @include mq($desktop) {
+    margin-right: 35px;
+
+    &:nth-child(6) {
+      margin-right: 44px;
+    }
+
+    &:nth-child(7) {
+      margin-right: 47px;
+    }
+
+    &:nth-last-child(2) {
+      margin-right: 37px;
+    }
+  }
 }
 
 .menu__link {

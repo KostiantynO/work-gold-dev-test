@@ -1,104 +1,94 @@
 <header class="header">
-  <p class="safety-message">
-    COVID-19: Learn what we’re doing to keep the community and our staff safe.
-  </p>
+  <div class="safety-message-wrapper">
+    <div class="container">
+      <p class="safety-message">
+        COVID-19: Learn what we’re doing to keep the community and our staff
+        safe.
+      </p>
+    </div>
+  </div>
 
   <div class="container">
-    <ul class="top-row__list">
-      <li class="top-row__item">
-        <button class="nav-btn header__btn" type="button">
-          <svg class="nav-btn__svg search-icon" width="27" height="27">
-            <use href="./images/svg/sprite.svg#icon-search"></use>
-          </svg>
-        </button>
-      </li>
+    <div class="top-row">
+      <button class="nav-btn burger-btn" type="button" mobile-menu-open-btn>
+        <svg class="nav-btn__svg search-icon" width="20" height="10">
+          <use href="./images/svg/sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
 
-      <li class="top-row__item">
-        <button class="nav-btn header__btn" type="button">
-          <svg class="nav-btn__svg shopbag-icon" width="19" height="24">
-            <use href="./images/svg/sprite.svg#icon-shopbag"></use>
-          </svg>
-        </button>
-      </li>
+      <ul class="top-row__list">
+        <li class="top-row__item">
+          <button class="nav-btn header__btn" type="button">
+            <svg class="nav-btn__svg search-icon" width="27" height="27">
+              <use href="./images/svg/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+        </li>
 
-      <li class="top-row__item">
-        <button class="nav-btn header__btn" type="button">
-          <svg class="nav-btn__svg heart-icon" width="23" height="17">
-            <use href="./images/svg/sprite.svg#icon-black-heart"></use>
-          </svg>
-        </button>
-      </li>
-    </ul>
+        <li class="top-row__item">
+          <button class="nav-btn header__btn" type="button">
+            <svg class="nav-btn__svg shopbag-icon" width="19" height="24">
+              <use href="./images/svg/sprite.svg#icon-shopbag"></use>
+            </svg>
+          </button>
+        </li>
+
+        <li class="top-row__item">
+          <button class="nav-btn header__btn" type="button">
+            <svg class="nav-btn__svg heart-icon" width="23" height="17">
+              <use href="./images/svg/sprite.svg#icon-black-heart"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
 
     <div class="logo-thumb header__logo-thumb">
-      <picture>
-        <source
-          media="(min-width: 768px)"
-          srcset="
-            ./images/photos/header/desktop/logo-desktop-67.png      67w,
-            ./images/photos/header/desktop/logo-desktop-67.png      67w,
-            ./images/photos/header/desktop/logo-desktop-134@2x.png 134w
-          "
-          sizes="(min-width: 768px) 67px, 100vw"
-          type="image/png"
-        />
-
-        <source
-          media="(max-width: 767px)"
-          srcset="
-            ./images/photos/header/mobile/logo-mobile-42.png    42w,
-            ./images/photos/header/mobile/logo-mobile-84@2x.png 84w
-          "
-          sizes="(max-width: 767px) 42px, 100vw"
-          type="image/png"
-        />
-
-        <img
-          class="logo__image"
-          src="./images/photos/header/mobile/logo-mobile-42.png"
-          alt="Showfields logo - three storey building with high windows"
-          loading="lazy"
-          decoding="async"
-          type="image/png"
-        />
-      </picture>
+      <svg
+        class="logo header__logo"
+        aria-label="Showfields logo - three storey building with high windows"
+        width="67"
+        height="82"
+      >
+        <use href="./images/svg/sprite.svg#icon-logo"></use>
+      </svg>
     </div>
 
     <div class="tagline-thumb">
       <picture>
         <source
           media="(min-width: 768px)"
+          sizes="(min-width: 768px) 286px, 100vw"
+          type="image/png"
           srcset="
             ./images/photos/header/desktop/tagline-desktop-286.png    286w,
             ./images/photos/header/desktop/tagline-desktop-572@2x.png 572w
           "
-          sizes="(min-width: 768px) 286px, 100vw"
-          type="image/png"
         />
 
         <source
           media="(max-width: 767px)"
+          sizes="(max-width: 767px) 181px, 100vw"
+          type="image/png"
           srcset="
             ./images/photos/header/mobile/tagline-mobile-181.png    181w,
             ./images/photos/header/mobile/tagline-mobile-362@2x.png 362w
           "
-          sizes="(max-width: 767px) 181px, 100vw"
-          type="image/png"
         />
 
         <img
           class="tagline__image"
-          src="./images/photos/header/mobile/tagline-mobile-181.png"
-          alt="The MOST INTERESTING STORE In The World"
-          loading="lazy"
-          decoding="async"
           type="image/png"
+          src="./images/photos/header/mobile/tagline-mobile-181.png"
+          loading="lazy"
+          alt="The MOST INTERESTING STORE In The World"
+          decoding="async"
         />
       </picture>
     </div>
 
     <nav class="nav">
-      <ul class="menu nav__menu" mobile-menu>
+      <ul class="menu nav__menu visually-hidden" mobile-menu>
         <li class="menu__item">
           <a class="menu__link" href="#">WHAT’S NEW</a>
         </li>

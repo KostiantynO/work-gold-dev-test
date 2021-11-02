@@ -9,7 +9,7 @@ export const initMobileMenu = () => {
   const toggleMenu = () => {
     const isMenuOpen = refs.openMenuBtn.getAttribute('aria-expanded') || false;
     refs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    refs.menu?.classList.toggle('is-hidden');
+    refs.menu?.classList.toggle('visually-hidden');
     refs.htmlAndBody.forEach(el.classList.toggle('no-scroll'));
   };
 

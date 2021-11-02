@@ -1,0 +1,9 @@
+.is-hidden {
+  display: none;
+}
+
+.visually-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0.01;
+}

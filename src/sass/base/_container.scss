@@ -1,10 +1,18 @@
 .container {
   @include paddings($pr: $padding, $pl: $padding);
+
   @include mq($mobile, $mr: auto, $ml: auto) {
-    max-width: map-get($breakpoints, $mobile) + 2 * $padding;
+    max-width: map-get($breakpoints, $mobile);
+    outline: green 1px solid;
   }
 
   @include mq($tablet) {
-    max-width: map-get($breakpoints, $tablet) + 2 * $padding;
+    max-width: map-get($breakpoints, $tablet);
+    outline: yellow 1px solid;
+  }
+
+  @include mq($desktop) {
+    max-width: map-get($breakpoints, $desktop);
+    outline: red 1px solid;
   }
 }
