@@ -1,43 +1,22 @@
 .nav-btn {
-  appearance: none;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  min-width: 27px;
-  min-height: 27px;
-  max-width: 27px;
-  max-height: 27px;
+  width: 27px;
+  height: 27px;
 
-  padding: 0;
-  font-size: 1rem;
-  line-height: 1;
-  background: none;
-  border: none;
+  border-radius: 4px;
 
-  height: 1em;
-  width: 1em;
+  @include transition;
+  transition-property: color;
 
-  text-align: center;
+  &:focus,
+  &:hover {
+    color: var(--color-accent);
+  }
 }
 
 .nav-btn__svg {
-  width: 100%;
-
-  align-items: center;
-  justify-content: center;
-  width: auto !important; /* overrides inline */
-  max-width: 100%;
-  height: auto !important; /* overrides inline */
-  max-height: 27px;
-  margin: 0 auto; /* poor attempt at centering */
-
-  text-align: center;
-  outline: none;
-  padding: 0;
-
-  & use {
-    display: block;
-    margin: 0 auto;
-  }
+  @extend %svg;
 }

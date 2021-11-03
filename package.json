@@ -18,10 +18,42 @@
   "bugs": {
     "url": "https://github.com/KostiantynO/work-gold-dev-test/issues"
   },
+  "customDistStructure": {
+    "config": {
+      "css": [
+        ".css",
+        ".css.map"
+      ],
+      "js": [
+        ".js",
+        ".js.map"
+      ],
+      "fonts": [
+        ".otf"
+      ],
+      "images/photos": [
+        ".jpg",
+        ".png"
+      ],
+      "images/svg": [
+        ".svg"
+      ],
+      "images/favicon": [
+        "favicon.ico",
+        "favicon*.png",
+        "android-chrome*.png",
+        "apple-touch-icon.png"
+      ]
+    },
+    "options": {
+      "development": true
+    }
+  },
   "devDependencies": {
     "browserslist": "^4.17.5",
     "caniuse-lite": "^1.0.30001274",
     "parcel-bundler": "^1.12.5",
+    "parcel-plugin-custom-dist-structure": "^1.1.19",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
     "posthtml-include": "^1.6.2",

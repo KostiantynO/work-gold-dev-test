@@ -1,0 +1,32 @@
+.mobile-btn {
+  width: 30px;
+}
+
+.burger-btn {
+  margin-top: 3px;
+}
+
+.burger-btn,
+.close-btn {
+  @include mq($tablet) {
+    display: none;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 54px;
+  right: 9px;
+
+  color: rgba(#ffffff, 0.8);
+
+  .backdrop.visually-hidden & {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0.01;
+  }
+}
+
+.close-icon {
+  transform: rotateZ(45deg);
+}

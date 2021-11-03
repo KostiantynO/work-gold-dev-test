@@ -2,8 +2,9 @@
   font-family: 'Ogg-Roman';
   font-style: normal;
   font-weight: 400;
-  src: local('Ogg'), local('Ogg-Roman'),
+  src: local('Ogg'), local('Ogg-Roman'), local('Ogg Roman'),
     url('../fonts/Ogg-Roman.otf') format('opentype');
+  font-display: swap;
 }
 
 @font-face {
@@ -13,6 +14,7 @@
   src: local('TradeGothicLTStd, Extended'), local('TradeGothicLTStd-Extended'),
     local('TradeGothicLTStd Extended'),
     url('../fonts/TradeGothicLTStd-Extended.otf') format('opentype');
+  font-display: swap;
 }
 
 @font-face {
@@ -22,4 +24,5 @@
   src: local('TradeGothicLTStd, BoldExt'), local('TradeGothicLTStd-BoldExt'),
     local('TradeGothicLTStd BoldExt'),
     url('../fonts/TradeGothicLTStd-BoldExt.otf') format('opentype');
+  font-display: swap;
 }
