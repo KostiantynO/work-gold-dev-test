@@ -1,0 +1,24 @@
+.backdrop {
+  @include mq($end: $tablet) {
+    contain: content;
+    position: fixed;
+    inset: 0;
+
+    padding: 48px 48px 48px 0;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    @include transition;
+    transition-property: transform, opacity, visibility, background-color;
+  }
+
+  &.visually-hidden {
+    overflow: hidden;
+
+    @include mq($tablet) {
+      pointer-events: initial;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

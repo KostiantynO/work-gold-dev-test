@@ -1,12 +1,13 @@
 .container {
   @include paddings($pr: $padding, $pl: $padding);
+  @include margins($mr: auto, $ml: auto);
 
-  @include mq($mobile, $mr: auto, $ml: auto) {
-    max-width: map-get($breakpoints, $mobile);
+  @include mq($mobile, $tablet) {
+    max-width: map-get($breakpoints, $mobile) + 2 * $padding;
     outline: green 1px solid;
   }
 
-  @include mq($tablet) {
+  @include mq($tablet, $desktop) {
     max-width: map-get($breakpoints, $tablet);
     outline: yellow 1px solid;
   }
@@ -14,5 +15,26 @@
   @include mq($desktop) {
     max-width: map-get($breakpoints, $desktop);
     outline: red 1px solid;
+  }
+}
+
+.container__mobile {
+  @include mq($end: $tablet) {
+    position: relative;
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+
+    background-color: #f2f2f2;
+    outline: green 1px solid;
+    transform: translateX(100%);
+
+    @include transition;
+    transition-property: transform, opacity, visibility, background-color;
+
+    .backdrop.visually-hidden & {
+      transform: translateX(0);
+    }
   }
 }

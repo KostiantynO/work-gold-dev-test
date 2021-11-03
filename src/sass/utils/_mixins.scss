@@ -153,4 +153,21 @@
   transition: var(--time) var(--cubic);
 }
 
+/// Mixin for z-index
+@mixin z-index {
+  $increment: $z-index-increment;
+
+  @each $selector in $z-index {
+    $idx: index($z-index, $value: $selector);
+
+    @if ($selector) {
+      #{$selector} {
+        z-index: $idx + $increment;
+      }
+      $increment: $increment + $increment;
+    }
+  }
+}
+@include z-index;
+
 /* -------------------------- END 'MIXINS' -------------------------- */

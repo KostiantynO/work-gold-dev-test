@@ -1,4 +1,3 @@
 import './sass/main.scss';
-
-import { initMobileMenu } from './js/mobile-menu';
-initMobileMenu();
+import { initEventListeners } from './js/event-listeners.js';
+initEventListeners();

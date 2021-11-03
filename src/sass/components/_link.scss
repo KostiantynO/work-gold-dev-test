@@ -1,0 +1,11 @@
+.link {
+  display: inline-block;
+
+  @include transition;
+  transition-property: color;
+
+  &:focus,
+  &:hover {
+    color: var(--color-accent);
+  }
+}

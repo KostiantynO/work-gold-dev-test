@@ -6,11 +6,17 @@
   width: 27px;
   height: 27px;
 
-  text-align: center;
+  border-radius: 4px;
+
+  @include transition;
+  transition-property: color;
+
+  &:focus,
+  &:hover {
+    color: var(--color-accent);
+  }
 }
 
 .nav-btn__svg {
   @extend %svg;
-
-  margin: 0 auto;
 }

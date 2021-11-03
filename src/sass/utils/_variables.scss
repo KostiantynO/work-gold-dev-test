@@ -4,14 +4,21 @@
   --secondary-font-bold: 'TradeGothicLTStd BoldExt';
 
   --color-primary: #000000;
+  --color-accent: #f2cf26;
   --color-footer-bg: #f2f2f2;
   --color-dark-blue: #1b2b48; // star
   --color-orange: #fc8750; // square / circle,  5edges
   --color-star: #fb8547;
-  --color-yellow: #f2cf26; //  square / circle
+  --color-gold: #f2cf26; //  square / circle
   --color-pink: #f4bab5; // circle, triangle
   --color-haki: #82a08b; // rod,
   --color-live-indicator: #b3f695;
+  --color-white: #ffffff;
+
+  --time: 250ms;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 $padding: 7px;
+$z-index-increment: 3;
+$z-index: ('.backdrop', '.close-btn');

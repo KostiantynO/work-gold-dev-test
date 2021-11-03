@@ -7,6 +7,9 @@
 
 .safety-message-wrapper {
   background-color: var(--color-footer-bg);
+
+  @include mq($end: $tablet, $mb: 5px);
+  @include mq($tablet, $mb: 33px);
 }
 
 .safety-message {
@@ -14,29 +17,33 @@
 
   text-align: center;
 
-  @include paddings($pt: 8px, $pb: 7px);
+  padding: 8px 45px;
 
-  @include mq($end: $tablet, $mb: 5px) {
+  @include mq($end: $tablet) {
     @include font(8.4px, $lh: 12px);
   }
 
-  @include mq($tablet, $mb: 33px) {
+  @include mq($tablet) {
     @include font(12px, $lh: 17px);
   }
 }
 
 .top-row {
   display: flex;
+
+  @include mq($end: $tablet, $mb: 10px);
+  @include mq($tablet, $mb: 2px);
 }
 
 .top-row__list {
   display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+
   gap: 3px;
 
-  margin-left: auto;
-
-  @include mq($end: $tablet, $mb: 10px);
-  @include mq($tablet, $mb: 2px) {
+  @include mq($tablet) {
     gap: 5px;
   }
 }
@@ -57,29 +64,19 @@
 
 .menu {
   @extend %list;
-
   display: flex;
-  justify-content: center;
 
-  &.visually-hidden {
-    @include mq($tablet) {
-      pointer-events: initial;
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-
-  @include mq($end: $tablet) {
+  @include mq($end: $tablet, $pt: 40px, $pb: 40px) {
     flex-direction: column;
     align-items: center;
-    gap: 5px;
   }
 
   @include mq($tablet) {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
-  @include mq($tablet, $desktop) {
+  @include mq($end: $desktop) {
     gap: 12px;
   }
 }
@@ -91,9 +88,7 @@
     }
   }
 
-  @include mq($desktop) {
-    margin-right: 35px;
-
+  @include mq($desktop, $mr: 35px) {
     &:nth-child(6) {
       margin-right: 44px;
     }

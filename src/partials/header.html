@@ -2,40 +2,76 @@
   <div class="safety-message-wrapper">
     <div class="container">
       <p class="safety-message">
-        COVID-19: Learn what we’re doing to keep the community and our staff
-        safe.
+        <a class="safety-message__link link" href="#">
+          COVID-19: Learn what we’re doing to keep the community and our staff
+          safe.
+        </a>
       </p>
     </div>
   </div>
 
   <div class="container">
     <div class="top-row">
-      <button class="nav-btn burger-btn" type="button" mobile-menu-open-btn>
-        <svg class="nav-btn__svg search-icon" width="20" height="10">
+      <button
+        class="nav-btn mobile-btn burger-btn"
+        type="button"
+        aria-controls="mobile-menu-id"
+        aria-expanded="false"
+        aria-label="Open menu button"
+        mobile-menu-open
+      >
+        <svg class="nav-btn__svg" aria-hidden="true" width="30" height="22">
           <use href="./images/svg/sprite.svg#icon-burger"></use>
         </svg>
       </button>
 
       <ul class="top-row__list">
         <li class="top-row__item">
-          <button class="nav-btn header__btn" type="button">
-            <svg class="nav-btn__svg search-icon" width="27" height="27">
+          <button
+            class="nav-btn header__btn"
+            aria-label="Search button"
+            type="button"
+          >
+            <svg
+              class="nav-btn__svg search-icon"
+              aria-hidden="true"
+              width="27"
+              height="27"
+            >
               <use href="./images/svg/sprite.svg#icon-search"></use>
             </svg>
           </button>
         </li>
 
         <li class="top-row__item">
-          <button class="nav-btn header__btn" type="button">
-            <svg class="nav-btn__svg shopbag-icon" width="19" height="24">
+          <button
+            class="nav-btn header__btn"
+            aria-label="Shop cart button"
+            type="button"
+          >
+            <svg
+              class="nav-btn__svg shopbag-icon"
+              aria-hidden="true"
+              width="19"
+              height="24"
+            >
               <use href="./images/svg/sprite.svg#icon-shopbag"></use>
             </svg>
           </button>
         </li>
 
         <li class="top-row__item">
-          <button class="nav-btn header__btn" type="button">
-            <svg class="nav-btn__svg heart-icon" width="23" height="17">
+          <button
+            class="nav-btn header__btn"
+            aria-label="Like button"
+            type="button"
+          >
+            <svg
+              class="nav-btn__svg heart-icon"
+              aria-hidden="true"
+              width="23"
+              height="17"
+            >
               <use href="./images/svg/sprite.svg#icon-black-heart"></use>
             </svg>
           </button>
@@ -80,55 +116,71 @@
           class="tagline__image"
           type="image/png"
           src="./images/photos/header/mobile/tagline-mobile-181.png"
-          loading="lazy"
           alt="The MOST INTERESTING STORE In The World"
-          decoding="async"
         />
       </picture>
     </div>
 
-    <nav class="nav">
-      <ul class="menu nav__menu visually-hidden" mobile-menu>
-        <li class="menu__item">
-          <a class="menu__link" href="#">WHAT’S NEW</a>
-        </li>
+    <nav class="nav backdrop visually-hidden" id="mobile-menu-id" mobile-menu>
+      <button
+        class="nav-btn mobile-btn close-btn"
+        type="button"
+        mobile-menu-close
+        aria-label="Close menu button"
+      >
+        <svg
+          class="nav-btn__svg close-icon"
+          aria-hidden="true"
+          width="30"
+          height="22"
+        >
+          <use href="./images/svg/sprite.svg#icon-plus"></use>
+        </svg>
+      </button>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">BRANDS</a>
-        </li>
+      <div class="container__mobile">
+        <ul class="menu nav__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#">WHAT’S NEW</a>
+          </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">CURATIONS</a>
-        </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">BRANDS</a>
+          </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">ART</a>
-        </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">CURATIONS</a>
+          </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">BEAUTY</a>
-        </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">ART</a>
+          </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">SELF CARE</a>
-        </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">BEAUTY</a>
+          </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">STYLE</a>
-        </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">SELF CARE</a>
+          </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">LIFESTYLE</a>
-        </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">STYLE</a>
+          </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">TECH</a>
-        </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">LIFESTYLE</a>
+          </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">STORIES</a>
-        </li>
-      </ul>
+          <li class="menu__item">
+            <a class="menu__link" href="#">TECH</a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="#">STORIES</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
 </header>
