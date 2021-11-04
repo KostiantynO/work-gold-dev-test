@@ -3,7 +3,7 @@
   @include margins($mr: auto, $ml: auto);
 
   @include mq($mobile, $tablet) {
-    max-width: map-get($breakpoints, $mobile) + 2 * $padding;
+    max-width: map-get($breakpoints, $mobile);
     outline: green 1px solid;
   }
 

@@ -1,4 +1,5 @@
-.link {
+.link,
+.menu__link {
   display: inline-block;
 
   @include transition;
