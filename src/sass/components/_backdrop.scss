@@ -4,12 +4,14 @@
     position: fixed;
     inset: 0;
 
-    padding: 48px 48px 48px 0;
+    padding: 0 100px 48px 0;
+
     overflow-y: scroll;
+
     background-color: rgba(0, 0, 0, 0.8);
 
     @include transition;
-    transition-property: transform, opacity, visibility, background-color;
+    transition-property: opacity, visibility;
   }
 
   &.visually-hidden {
@@ -19,6 +21,30 @@
       pointer-events: initial;
       visibility: visible;
       opacity: 1;
+    }
+  }
+}
+
+.mobile-menu__container {
+  @include mq($end: $tablet) {
+    position: relative;
+    top: 0;
+    height: 100%;
+
+    left: -100%;
+
+    width: 100%;
+
+    background-color: #f2f2f2;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: green 1px solid;
+
+    transition: var(--time) var(--cubic) 190ms transform;
+    transform: translateX(100%);
+    .backdrop.visually-hidden & {
+      transition: var(--time) var(--cubic) transform;
+      transform: translateX(0);
     }
   }
 }

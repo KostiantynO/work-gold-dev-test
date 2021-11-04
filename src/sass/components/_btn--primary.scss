@@ -1,0 +1,8 @@
+.btn--primary {
+  min-width: 190px;
+  padding: 6px 21px;
+
+  font-family: var(--secondary-font-bold);
+  border: 1px solid #000000;
+  @include font(16px, 700, 20px);
+}

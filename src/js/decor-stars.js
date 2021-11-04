@@ -6,6 +6,7 @@ const decorStarsDesktop = [
     width: '48px',
     left: '40px',
     top: '657px',
+    angle: -0.21,
   },
   {
     name: 'fill-2',
@@ -13,6 +14,7 @@ const decorStarsDesktop = [
     width: '31px',
     left: '108px',
     top: '720px',
+    angle: 2.16,
   },
   {
     name: 'fill-3',
@@ -20,6 +22,7 @@ const decorStarsDesktop = [
     width: '31px',
     left: '175px',
     top: '683px',
+    angle: 0.91,
   },
   {
     name: 'fill-4',
@@ -27,6 +30,7 @@ const decorStarsDesktop = [
     width: '46px',
     left: '275px',
     top: '664px',
+    angle: 0.59,
   },
   {
     name: 'fill-5',
@@ -34,6 +38,7 @@ const decorStarsDesktop = [
     width: '28px',
     left: '393px',
     top: '630px',
+    angle: 0.7,
   },
   {
     name: 'fill-6',
@@ -41,6 +46,7 @@ const decorStarsDesktop = [
     width: '24px',
     left: '694px',
     top: '649px',
+    angle: 0.93,
   },
   {
     name: 'fill-7',
@@ -48,6 +54,7 @@ const decorStarsDesktop = [
     width: '36px',
     left: '749px',
     top: '699px',
+    angle: 0.56,
   },
   {
     name: 'fill-8',
@@ -55,6 +62,7 @@ const decorStarsDesktop = [
     width: '22px',
     left: '840px',
     top: '673px',
+    angle: 0.71,
   },
   {
     name: 'fill-9',
@@ -62,6 +70,7 @@ const decorStarsDesktop = [
     width: '46px',
     left: '900px',
     top: '686px',
+    angle: 0.6,
   },
   {
     name: 'fill-10',
@@ -69,6 +78,7 @@ const decorStarsDesktop = [
     width: '26px',
     left: '988px',
     top: '695px',
+    angle: 0.7,
   },
 ];
 
@@ -79,6 +89,7 @@ const decorStarsMobile = [
     width: '14px',
     left: '7px',
     top: '617px',
+    angle: -0.34,
   },
   {
     name: 'fill-2',
@@ -86,6 +97,7 @@ const decorStarsMobile = [
     width: '14px',
     left: '31px',
     top: '593px',
+    angle: -0.36,
   },
   {
     name: 'fill-3',
@@ -93,6 +105,7 @@ const decorStarsMobile = [
     width: '21px',
     left: '65px',
     top: '576px',
+    angle: -0.61,
   },
   {
     name: 'fill-4',
@@ -100,6 +113,7 @@ const decorStarsMobile = [
     width: '13px',
     left: '136px',
     top: '576px',
+    angle: -0.61,
   },
   {
     name: 'fill-5',
@@ -107,13 +121,15 @@ const decorStarsMobile = [
     width: '21px',
     left: '239px',
     top: '580px',
+    angle: -0.61,
   },
   {
     name: 'fill-6',
     color: '#C9CFDA',
     width: '21px',
-    left: '304px',
-    top: '625px',
+    left: '285px',
+    top: '605px',
+    angle: 0,
   },
 ];
 

@@ -1,21 +1,17 @@
-.upcoming-curations {
-  padding: 11px 0 16px;
-}
+// .upcoming-curations { }
 
 .upcoming-curations__container {
   position: relative;
-
   min-height: 114px;
 
-  @include mq($tablet) {
+  padding-top: 49px;
+
+  @include mq($tablet, $pt: 62px) {
     min-height: 148px;
   }
 }
 
-.upcoming-curations__title {
-  padding-top: 49px;
-  @include mq($tablet, $pt: 62px);
-}
+// .upcoming-curations__title { }
 
 .upcoming-curations__title-text {
   width: min-content;

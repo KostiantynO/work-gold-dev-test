@@ -1,3 +1,18 @@
+.text-block {
+  @include transition;
+  transition-property: transform;
+  transform: translateX(50%);
+}
+
+.text-inline-block {
+  display: inline-block;
+  text-align: center;
+
+  @include transition;
+  transition-property: transform;
+  transform: translateX(-50%);
+}
+
 .section__title {
   position: relative;
 }
@@ -16,17 +31,7 @@
   }
 }
 
-.text-block {
-  @include transition;
-  transition-property: transform;
-  transform: translateX(50%);
-}
-
-.text-inline-block {
-  display: inline-block;
-  text-align: center;
-
-  @include transition;
-  transition-property: transform;
-  transform: translateX(-50%);
+.title-v3 {
+  font-family: var(--secondary-font-bold);
+  @include font(20px, 700, 37px);
 }

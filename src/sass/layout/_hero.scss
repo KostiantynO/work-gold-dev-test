@@ -1,32 +1,36 @@
-.hero-bg {
-  height: 240px;
-  // Путь к изображениям из SASS-файла всегда такой, как из папки css
-  // background-image: url('../images/demo.jpg');
-  background-size: cover;
-  background-position: center;
-}
+// if need bg - background-image: url('../images/hero/desktop/hero-bg.jpg');
 
 .hero {
   background-color: var(--color-primary);
   padding-top: 40px;
   padding-bottom: 55px;
 }
+
+.hero__container {
+  padding: 0 19px 0 22px;
+}
+
 .hero__title {
   margin-bottom: 27px;
 }
 
 .hero__description {
   font-family: var(--secondary-font);
-  @include font(16px, $lh: 27px);
-  color: var(--color-white);
-}
+  @include font(16px, $lh: 25px);
 
-.hero__description-text {
-  @include mq($tablet, $desktop) {
-    padding: 0 87px;
+  color: var(--color-white);
+
+  @include mq($tablet) {
+    @include font(16px, $lh: 27px);
   }
 
-  @include mq($desktop) {
-    padding: 0 230px;
+  &-text {
+    max-width: 670px;
+
+    &-mobile.is-hidden {
+      @include mq($tablet) {
+        display: initial;
+      }
+    }
   }
 }

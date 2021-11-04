@@ -1,0 +1,21 @@
+.btn {
+  @include transition;
+  transition-property: color;
+
+  &:focus,
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.indicator-btn {
+  @include transition;
+  transition-property: transform, background-color, border-color;
+
+  &:focus,
+  &:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: scale(1.5);
+  }
+}
