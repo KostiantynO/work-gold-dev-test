@@ -33,5 +33,9 @@
 
 .title-v3 {
   font-family: var(--secondary-font-bold);
-  @include font(20px, 700, 37px);
+  @include font(16px, 700, 37px);
+
+  @include mq($tablet) {
+    @include font(20px, 700, 37px);
+  }
 }

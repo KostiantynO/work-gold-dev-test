@@ -111,24 +111,25 @@
 }
 
 .live-curation__titles-wrapper {
-  @include mq($end: $tablet, $pt: 50px) {
+  @include mq($end: $tablet, $pt: 30px) {
     position: absolute;
     top: 0;
     right: 0;
+    width: 100%;
   }
 
   @include mq($tablet, $pt: 109px);
 }
 
 .live-curation__title {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+
+  @include mq($tablet, $mb: 20px);
 }
 
 /* Maristella González */
 .live-curation__speaker-name {
   margin-bottom: 25px;
-
-  @include font(25px, 400, 63px); // ogg // Libre Caslon Display;
 
   @include mq($tablet) {
     @include font(61px, 400, 63px);
