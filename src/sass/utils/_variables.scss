@@ -1,17 +1,26 @@
 :root {
-  --main-font: 'Ogg-Roman';
-  --secondary-font: 'TradeGothicLTStd Extended';
-  --secondary-font-bold: 'TradeGothicLTStd BoldExt';
+  --main-font: 'Ogg-Roman'; // `Questrial`
+
+  --secondary-font: 'TradeGothicLTStd Extended'; // `Libre Caslon Display, Regular`
+  --secondary-font-bold: 'TradeGothicLTStd BoldExt'; // `Montserrat, Bold`
 
   --color-primary: #000000;
-  --color-accent: #f2cf26;
+  --color-accent: #2196f3;
   --color-footer-bg: #f2f2f2;
   --color-dark-blue: #1b2b48; // star
   --color-orange: #fc8750; // square / circle,  5edges
-  --color-star: #fb8547;
+  --color-orange-star: #fb8547;
+  --color-dark-green: #114837;
+
   --color-gold: #f2cf26; //  square / circle
+  --color-gold-star: #f6d500; // star
   --color-pink: #f4bab5; // circle, triangle
-  --color-haki: #82a08b; // rod,
+  --color-pink-star: #f7b8ae; // pink star
+
+  --color-khaki: #82a08b; // rod,
+  --color-khaki-star: #80a08d; // star,
+  --color-grey-star: #c9cfda; // star
+
   --color-live-indicator: #b3f695;
   --color-white: #ffffff;
 
@@ -21,4 +30,11 @@
 
 $padding: 7px;
 $z-index-increment: 3;
-$z-index: ('.backdrop', '.close-btn');
+$z-index: (
+  '.decor',
+  '.section__title',
+  '.live-curation__thumb::before',
+  '.live-curation__image',
+  '.backdrop',
+  '.close-btn'
+);

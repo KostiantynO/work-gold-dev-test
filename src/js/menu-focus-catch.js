@@ -1,8 +1,10 @@
+// @ts-check
 const refs = {
   menu: document.querySelector('[mobile-menu]'),
   openMenuBtn: document.querySelector('[mobile-menu-open]'),
   closeMenuBtn: document.querySelector('[mobile-menu-close]'),
   htmlAndBody: document.querySelectorAll('[no-scroll]'),
+  decorStarsContainer: document.querySelector('[decor-stars-container]'),
 };
 
 // adds all elements to focus in mobile menu

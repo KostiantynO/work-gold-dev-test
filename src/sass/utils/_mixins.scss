@@ -162,9 +162,8 @@
 
     @if ($selector) {
       #{$selector} {
-        z-index: $idx + $increment;
+        z-index: $idx * $increment;
       }
-      $increment: $increment + $increment;
     }
   }
 }

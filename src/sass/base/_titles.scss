@@ -1,0 +1,32 @@
+.section__title {
+  position: relative;
+}
+// .section__title-text { }
+
+.title-v1 {
+  @include font(61px, 400, 63px);
+  color: var(--color-white);
+}
+
+.title-v2 {
+  @include font(25px, 400, 40px);
+
+  @include mq($tablet) {
+    @include font(36px, 400, 40px);
+  }
+}
+
+.text-block {
+  @include transition;
+  transition-property: transform;
+  transform: translateX(50%);
+}
+
+.text-inline-block {
+  display: inline-block;
+  text-align: center;
+
+  @include transition;
+  transition-property: transform;
+  transform: translateX(-50%);
+}

@@ -39,10 +39,10 @@
         ".svg"
       ],
       "images/favicon": [
-        "favicon.ico",
+        ".ico",
         "favicon*.png",
         "android-chrome*.png",
-        "apple-touch-icon.png"
+        "apple-touch-icon*.png"
       ]
     },
     "options": {
@@ -52,6 +52,7 @@
   "devDependencies": {
     "browserslist": "^4.17.5",
     "caniuse-lite": "^1.0.30001274",
+    "lodash.throttle": "^4.1.1",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-custom-dist-structure": "^1.1.19",
     "parcel-plugin-handlebars-precompile": "^1.0.2",

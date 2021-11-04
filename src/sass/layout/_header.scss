@@ -17,14 +17,14 @@
 
   text-align: center;
 
-  padding: 8px 45px;
+  padding: 4px 42px;
 
   @include mq($end: $tablet) {
-    @include font(8.4px, $lh: 12px);
+    @include font(8.4px, $lh: 14px);
   }
 
   @include mq($tablet) {
-    @include font(12px, $lh: 17px);
+    @include font(14px, $lh: 16px);
   }
 }
 

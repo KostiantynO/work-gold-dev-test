@@ -54,11 +54,19 @@
   </head>
 
   <body no-scroll="">
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
     <include src="./partials/header.html"></include>
-    <include src="./partials/hero.html"></include>
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <main>
+      <include src="./partials/hero.html"></include>
+
+      <include src="./partials/upcoming-curations.html"></include>
+
+      <include src="./partials/live-curation.html"></include>
+    </main>
+
+    <include src="./partials/footer.html"></include>
+
+    <!-- Скрипт в конце body c подключенным main.scss -->
     <script src="./index.js"></script>
   </body>
 </html>

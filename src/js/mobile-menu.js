@@ -1,3 +1,4 @@
+// @ts-check
 import {
   listenOnKeydownFocusCatch,
   firstFocusElem,
@@ -9,7 +10,7 @@ const isMenuOpen = () =>
   refs.openMenuBtn.getAttribute('aria-expanded') || false;
 
 const toggleMenu = () => {
-  refs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen());
+  refs.openMenuBtn.setAttribute('aria-expanded', `${!isMenuOpen()}`);
   refs.menu?.classList.toggle('visually-hidden');
   refs.htmlAndBody.forEach(el => el.classList.toggle('no-scroll'));
 };
