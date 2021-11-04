@@ -17,24 +17,3 @@
     outline: red 1px solid;
   }
 }
-
-.container__mobile {
-  @include mq($end: $tablet) {
-    position: relative;
-    top: 0;
-    left: -100%;
-
-    width: 100%;
-
-    background-color: #f2f2f2;
-    outline: green 1px solid;
-    transform: translateX(100%);
-
-    @include transition;
-    transition-property: transform, opacity, visibility, background-color;
-
-    .backdrop.visually-hidden & {
-      transform: translateX(0);
-    }
-  }
-}

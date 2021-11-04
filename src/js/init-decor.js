@@ -72,27 +72,26 @@ const populateCanvas = (domEl, starsArray) => {
       .getContext('2d')
       .clearRect(0, 0, domEl.clientWidth, domEl.clientHeight);
 
-    starsArray.forEach(({ color, width, left, top }) => {
+    starsArray.forEach(({ color, width, left, top, angle }) => {
       const starObj = {
-        cx: parseInt(left),
-        cy: parseInt(top) - (domEl.clientWidth > 760 ? 599 : 545),
-        outerRadius: parseInt(width) * 0.6,
+        cx: parseInt(left) + parseInt(width) * 0.5,
+        cy: parseInt(top) - (domEl.clientWidth > 760 ? 605 : 545),
+        outerRadius: parseInt(width) * 0.58,
 
-        innerRadius: parseInt(width) * 0.3,
+        innerRadius: parseInt(width) * 0.28,
         numPoints: 5,
-        lineWidth: 1,
-        stroke: 'transparent',
+        lineWidth: 0,
+        stroke: `transparent`,
         fill: `${color}`,
-        rotate: 0,
+        rotate: angle,
       };
-      console.log('starsArray.forEach ~ outerRadius', starObj.outerRadius);
 
       drawJS.drawStar(domEl, starObj);
     });
   }
 };
 
-const canvas = document.querySelector('[decor-stars-container]');
+const canvasRef = document.querySelector('[decor-stars-container]');
 
 const setUpCanvas = el => {
   if (el) {
@@ -102,24 +101,29 @@ const setUpCanvas = el => {
   }
 };
 
-setUpCanvas(canvas);
+setUpCanvas(canvasRef);
 
-if (window.matchMedia('min-width: 768px').matches) {
-  populateCanvas(canvas, decorStarsDesktop);
+if (window.matchMedia('(min-width: 768px)').matches) {
+  populateCanvas(canvasRef, decorStarsDesktop);
 } else {
-  populateCanvas(canvas, decorStarsMobile);
+  populateCanvas(canvasRef, decorStarsMobile);
 }
 
 const onResizeUpdateCanvas = () => {
-  setUpCanvas(canvas);
+  setUpCanvas(canvasRef);
 
-  if (window.matchMedia('min-width: 768px').matches) {
-    populateCanvas(canvas, decorStarsDesktop);
-  } else {
-    populateCanvas(canvas, decorStarsMobile);
+  if (canvasRef) {
+    const redrawCondition =
+      window.matchMedia('(min-width: 768px)').matches && canvasRef.width >= 768;
+
+    if (redrawCondition) {
+      populateCanvas(canvasRef, decorStarsDesktop);
+    } else {
+      populateCanvas(canvasRef, decorStarsMobile);
+    }
   }
 };
 
-window.addEventListener('resize', throttle(onResizeUpdateCanvas, 250), {
+window.addEventListener('resize', throttle(onResizeUpdateCanvas, 500), {
   passive: true,
 });
