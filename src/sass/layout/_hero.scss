@@ -2,16 +2,15 @@
 
 .hero {
   background-color: var(--color-primary);
-  padding-top: 40px;
-  padding-bottom: 55px;
+  padding: 44px 0 55px;
 }
 
 .hero__container {
-  padding: 0 19px 0 22px;
+  padding: 0 19px 0 21px;
 }
 
 .hero__title {
-  margin-bottom: 27px;
+  margin-bottom: 40px;
 }
 
 .hero__description {
@@ -26,11 +25,5 @@
 
   &-text {
     max-width: 670px;
-
-    &-mobile.is-hidden {
-      @include mq($tablet) {
-        display: initial;
-      }
-    }
   }
 }

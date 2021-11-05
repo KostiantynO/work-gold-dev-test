@@ -1,66 +1,100 @@
 <section class="live-curation">
   <div class="container">
     <ul class="live-curation__list">
-      <li class="live-curation__item">
+      <li class="live-curation__item current">
         <div class="live-curation__slide">
-          <div class="live-curation__thumb-wrapper">
-            <div class="live-curation__thumb">
-              <img
-                class="live-curation__image"
-                src="./images/photos/live-curation/live-curation-photo.jpg"
-                alt="Maristella González - sensual woman with half-closed eyes and mouth showing her unprotected neck on the sun"
-              />
-            </div>
-            <button class="btn live-status-btn">
-              <span class="live-status__indicator"></span>
-              <span class="live-status">LIVE RECORDING</span>
-            </button>
-          </div>
-          <div class="meta-wrapper live-curation__meta-wrapper">
+          <div class="speaker">
             <div class="live-curation__titles-wrapper">
-              <h3 class="text-block title-v3 live-curation__title">
+              <h3 class="text-block live-curation__title">
                 <span class="text-inline-block">A LIVE CURATION WITH</span>
               </h3>
-              <h2 class="text-block title-v2 live-curation__speaker-name">
+
+              <h2 class="text-block live-curation__speaker-name">
                 <span class="text-inline-block">Maristella González</span>
               </h2>
             </div>
-            <p class="text-block live-curation__description">
-              <span class="text-inline-block live-curation__description-text">
-                Enter the wonderous world of Showfields. Our mission is to
-                create a better way for customers to discover, engage and shop
-                emerging brands and artists of tomorrow.</span
-              >
-            </p>
-            <button class="btn btn--primary" type="button">RSVP</button>
+
+            <div class="live-curation__thumb-wrapper">
+              <div class="live-curation__thumb">
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    sizes="(min-width: 768px) 215px, 100vw"
+                    type="image/jpg"
+                    srcset="
+                      ./images/photos/live-curation/live-curation-photo@2x.jpg 215w
+                    "
+                  />
+
+                  <source
+                    media="(max-width: 767px)"
+                    sizes="(max-width: 767px) 118px, 100vw"
+                    type="image/jpg"
+                    srcset="
+                      ./images/photos/live-curation/live-curation-photo.jpg 118w
+                    "
+                  />
+
+                  <img
+                    class="live-curation__image lazyload"
+                    src="./images/photos/live-curation/live-curation-photo.jpg"
+                    loading="lazy"
+                    alt="Maristella González - sensual woman with half-closed eyes and mouth showing her unprotected neck on the sun"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+
+              <button class="btn live-status-btn">
+                <span class="live-status__indicator"></span>
+                <span class="live-status">LIVE RECORDING</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="slide-description-wrapper">
+            <div class="live-curation__meta-wrapper">
+              <p class="text-block live-curation__description">
+                <span class="text-inline-block live-curation__description-text">
+                  <span class="hidden-on-mobile">
+                    Enter the wondrous world of Showfields.
+                  </span>
+
+                  Our mission is to create a better way for customers to
+                  discover, engage and shop emerging brands and artists of
+                  tomorrow.
+                </span>
+              </p>
+              <button class="btn btn--primary" type="button">RSVP</button>
+            </div>
           </div>
         </div>
+      </li>
+    </ul>
 
-        <ul class="slide-indicator-list live-curation__slide-indicator-list">
-          <li class="live-curation__slide-indicator-item current">
-            <button
-              class="btn indicator-btn"
-              type="button"
-              aria-label="Slide 1"
-            ></button>
-          </li>
+    <ul class="slide-indicator-list live-curation__slide-indicator-list">
+      <li class="live-curation__slide-indicator-item current">
+        <button
+          class="btn indicator-btn"
+          type="button"
+          aria-label="Slide 1"
+        ></button>
+      </li>
 
-          <li class="live-curation__slide-indicator-item">
-            <button
-              class="btn indicator-btn"
-              type="button"
-              aria-label="Slide 2"
-            ></button>
-          </li>
+      <li class="live-curation__slide-indicator-item">
+        <button
+          class="btn indicator-btn"
+          type="button"
+          aria-label="Slide 2"
+        ></button>
+      </li>
 
-          <li class="live-curation__slide-indicator-item">
-            <button
-              class="btn indicator-btn"
-              type="button"
-              aria-label="Slide 3"
-            ></button>
-          </li>
-        </ul>
+      <li class="live-curation__slide-indicator-item">
+        <button
+          class="btn indicator-btn"
+          type="button"
+          aria-label="Slide 3"
+        ></button>
       </li>
     </ul>
   </div>

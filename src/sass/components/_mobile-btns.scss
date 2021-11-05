@@ -1,9 +1,10 @@
 .mobile-btn {
-  width: 30px;
+  contain: content;
 }
 
 .burger-btn {
-  margin-top: 3px;
+  position: relative;
+  left: -4px;
 }
 
 .burger-btn,
@@ -15,8 +16,12 @@
 
 .close-btn {
   position: absolute;
-  top: 54px;
-  right: 9px;
+  top: 4px;
+
+  width: 48px;
+  height: 48px;
+
+  left: 70vw;
 
   color: rgba(#ffffff, 0.8);
 
@@ -28,5 +33,17 @@
 }
 
 .close-icon {
+  width: 24px;
+  height: 24px;
   transform: rotateZ(45deg);
+}
+
+.burger-btn__svg {
+  width: 29px;
+  height: 22px;
+
+  @include mq($tablet) {
+    width: 30px;
+    height: 22px;
+  }
 }

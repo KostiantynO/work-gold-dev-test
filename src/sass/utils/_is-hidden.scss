@@ -7,3 +7,15 @@
   visibility: hidden;
   opacity: 0.01;
 }
+
+.hidden-on-mobile {
+  @include mq($end: $tablet) {
+    display: none;
+  }
+}
+
+.hidden-from-tablet {
+  @include mq($tablet) {
+    display: none;
+  }
+}

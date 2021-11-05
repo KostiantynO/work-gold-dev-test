@@ -1,10 +1,23 @@
+@use 'sass:list';
+
 // prettier-ignore
 @mixin font($fs: null, $fw: null, $lh: null, $ls: null) {
-  @if ($fs) { font-size:      $fs; }
-  @if ($fw) { font-weight:    $fw; }
-  @if ($lh) { @if ($fs) { line-height: round(1000 * $lh / $fs) / 1000; }
-                @else   { line-height: $lh; } }
-  @if ($ls) { letter-spacing: $ls; }
+  @if ($fs) {
+    font-size: $fs;
+  }
+  @if ($fw) {
+    font-weight: $fw;
+  }
+  @if ($lh) {
+    @if ($fs) {
+      line-height: round(1000 * $lh / $fs) / 1000;
+    } @else {
+      line-height: $lh;
+    }
+  }
+  @if ($ls) {
+    letter-spacing: $ls;
+  }
 } //14px, 400, 1.71, 0.03em default
 // ------------------------- START 'MIXINS' -------------------------
 
@@ -13,10 +26,7 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url('#{$url}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: center/contain no-repeat url('#{$url}');
   }
 }
 
@@ -168,5 +178,14 @@
   }
 }
 @include z-index;
+
+// generate margin-right for a list-items
+@mixin margin-right($margins-array) {
+  @for $i from 1 through length($margins-array) {
+    &:nth-child(#{$i}) {
+      margin-right: list.nth($margins-array, $i) * 1px;
+    }
+  }
+}
 
 /* -------------------------- END 'MIXINS' -------------------------- */

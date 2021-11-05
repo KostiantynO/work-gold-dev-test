@@ -1,0 +1,25 @@
+.logo-thumb__mobile {
+}
+
+.logo__mobile {
+}
+
+.header__logo-thumb {
+  margin-bottom: 8px;
+}
+
+.header__logo {
+  margin: 0 auto;
+}
+
+.logo {
+  @extend %svg;
+
+  width: 42px;
+  height: 52px;
+
+  @include mq($tablet) {
+    width: 67px;
+    height: 82px;
+  }
+}

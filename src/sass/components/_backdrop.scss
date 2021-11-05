@@ -4,7 +4,7 @@
     position: fixed;
     inset: 0;
 
-    padding: 0 100px 48px 0;
+    padding: 0 100px 0 0;
 
     overflow-y: scroll;
 
@@ -27,21 +27,26 @@
 
 .mobile-menu__container {
   @include mq($end: $tablet) {
+    contain: content;
+
     position: relative;
     top: 0;
-    height: 100%;
+    left: -70vw;
 
-    left: -100%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70vw;
+    height: 100vh;
 
-    width: 100%;
+    padding: 21px;
 
-    background-color: #f2f2f2;
+    background-color: var(--color-footer-bg);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    outline: green 1px solid;
 
     transition: var(--time) var(--cubic) 190ms transform;
-    transform: translateX(100%);
+    transform: translateX(70vw);
+
     .backdrop.visually-hidden & {
       transition: var(--time) var(--cubic) transform;
       transform: translateX(0);

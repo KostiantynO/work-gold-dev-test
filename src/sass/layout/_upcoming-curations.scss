@@ -1,4 +1,6 @@
-// .upcoming-curations { }
+.upcoming-curations {
+  contain: content;
+}
 
 .upcoming-curations__container {
   position: relative;
@@ -16,8 +18,8 @@
 .upcoming-curations__title-text {
   width: min-content;
   white-space: nowrap;
-  @include mq($tablet) {
-    background-color: #fff;
+  @include mq($tablet, $pl: 30px) {
+    background-color: var(--color-white);
   }
 }
 
@@ -77,27 +79,28 @@ $decorStars: (
   )
 );
 
-@mixin generateDecorStarsSelectors($map-name: null) {
-  // @for $i from 1 through length($map-name) {
-  //   $starParams: nth($map-name, $i);
+// Mixin below returns error. Solution: drawJS.drawStar(starObj) on canvas.
+// @mixin generateDecorStarsSelectors($map-name: null) {
+// @for $i from 1 through length($map-name) {
+//   $starParams: nth($map-name, $i);
 
-  //   &--hello#{$i} {
-  //     background-color: red;
-  //   }
+//   &--hello#{$i} {
+//     background-color: red;
+//   }
 
-  //   // &--fill-#{$i} {
-  //   //   // @each $property in $star {
-  //   //   //   $property: map-get($star, $property);
-  //   //   // }
-  //   // }
-  // }
-}
+//   // &--fill-#{$i} {
+//   //   // @each $property in $star {
+//   //   //   $property: map-get($star, $property);
+//   //   // }
+//   // }
+// }
+// }
 
 .decor__star {
   position: absolute;
   display: inline-block;
 
-  @include generateDecorStarsSelectors($decorStars);
+  // @include generateDecorStarsSelectors($decorStars);
 
   // &--fill-0 {
   //   top: 657px;

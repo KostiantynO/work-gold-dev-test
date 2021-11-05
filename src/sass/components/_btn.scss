@@ -1,10 +1,11 @@
 .btn {
   @include transition;
-  transition-property: color;
+  transition-property: color, box-shadow;
 
   &:focus,
   &:hover {
     color: var(--color-accent);
+    box-shadow: 0.3rem 0.3rem 1rem rgba(#212121, 0.3);
   }
 }
 
