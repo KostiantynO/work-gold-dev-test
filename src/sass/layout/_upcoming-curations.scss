@@ -18,8 +18,8 @@
 .upcoming-curations__title-text {
   width: min-content;
   white-space: nowrap;
-  @include mq($tablet) {
-    background-color: #fff;
+  @include mq($tablet, $pl: 30px) {
+    background-color: var(--color-white);
   }
 }
 

@@ -1,15 +1,21 @@
 .nav-btn {
+  contain: content;
+
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
-  width: 27px;
-  height: 27px;
-
+  padding: 5px 0 10px;
   border-radius: 4px;
+
+  height: 35px;
 
   @include transition;
   transition-property: color;
+
+  @include mq($tablet) {
+    padding: 4px 0 2px;
+  }
 
   &:focus,
   &:hover {
@@ -19,4 +25,34 @@
 
 .nav-btn__svg {
   @extend %svg;
+
+  @include mq($tablet) {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+.search-icon {
+  width: 21px;
+  height: 20px;
+
+  @include mq($tablet) {
+    width: 29px;
+    height: 29px;
+  }
+}
+
+.shopbag-icon {
+  width: 16px;
+  height: 18px;
+}
+
+.heart-icon {
+  width: 15px;
+  height: 14px;
+
+  @include mq($tablet) {
+    width: 24px;
+    height: 24px;
+  }
 }

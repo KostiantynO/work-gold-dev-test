@@ -20,7 +20,7 @@
         aria-label="Open menu button"
         mobile-menu-open
       >
-        <svg class="nav-btn__svg" aria-hidden="true" width="30" height="22">
+        <svg class="burger-btn__svg" aria-hidden="true" width="30" height="22">
           <use href="./images/svg/sprite.svg#icon-burger"></use>
         </svg>
       </button>
@@ -139,7 +139,18 @@
       </button>
 
       <div class="mobile-menu__container">
-        <ul class="menu nav__menu">
+        <div class="logo-thumb hidden-from-tablet">
+          <svg
+            class="logo logo-thumb__mobile"
+            aria-label="Showfields logo - three storey building with high windows"
+            width="42"
+            height="52"
+          >
+            <use href="./images/svg/sprite.svg#icon-logo"></use>
+          </svg>
+        </div>
+
+        <ul class="menu nav__menu nav__menu-mobile">
           <li class="menu__item">
             <a class="menu__link" href="#">WHAT’S NEW</a>
           </li>

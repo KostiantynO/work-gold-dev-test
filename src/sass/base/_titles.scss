@@ -19,8 +19,15 @@
 // .section__title-text { }
 
 .title-v1 {
-  @include font(61px, 400, 63px);
   color: var(--color-white);
+
+  // font-family: Libre Caslon Display;
+  @include font(25px, 400, 25px);
+  margin-bottom: 40px;
+
+  @include mq($tablet) {
+    @include font(61px, 400, 63px);
+  }
 }
 
 .title-v2 {

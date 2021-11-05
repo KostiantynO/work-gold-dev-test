@@ -76,9 +76,9 @@ const populateCanvas = (domEl, starsArray) => {
       const starObj = {
         cx: parseInt(left) + parseInt(width) * 0.5,
         cy: parseInt(top) - (domEl.clientWidth > 760 ? 605 : 545),
-        outerRadius: parseInt(width) * 0.58,
+        outerRadius: parseInt(width) * 0.55,
 
-        innerRadius: parseInt(width) * 0.28,
+        innerRadius: parseInt(width) * 0.25,
         numPoints: 5,
         lineWidth: 0,
         stroke: `transparent`,
