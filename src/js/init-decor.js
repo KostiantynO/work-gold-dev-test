@@ -114,7 +114,7 @@ const onResizeUpdateCanvas = () => {
 
   if (canvasRef) {
     const redrawCondition =
-      window.matchMedia('(min-width: 768px)').matches && canvasRef.width >= 768;
+      window.matchMedia('(min-width: 768px)').matches && canvasRef.width >= 750;
 
     if (redrawCondition) {
       populateCanvas(canvasRef, decorStarsDesktop);
@@ -124,6 +124,9 @@ const onResizeUpdateCanvas = () => {
   }
 };
 
-window.addEventListener('resize', throttle(onResizeUpdateCanvas, 500), {
-  passive: true,
-});
+const listenOnResizeUpdateCanvas = () =>
+  window.addEventListener('resize', throttle(onResizeUpdateCanvas, 500), {
+    passive: true,
+  });
+
+export { listenOnResizeUpdateCanvas };

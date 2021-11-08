@@ -13,5 +13,9 @@
 
   @include mq($tablet) {
     min-width: 195px;
+
+    color: var(--color-primary);
+    border: none;
+    background-color: var(--color-white);
   }
 }

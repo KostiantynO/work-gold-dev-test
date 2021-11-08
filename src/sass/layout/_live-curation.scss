@@ -94,11 +94,9 @@
   }
 
   background: center/contain no-repeat
-    url('../images/photos/live-curation/live-curation-circle.png');
+    url('../images/photos/live-curation-circle.png');
 
-  @include bg-retina(
-    '../images/photos/live-curation/live-curation-circle@2x.png'
-  );
+  @include bg-retina('../images/photos/live-curation-circle@2x.png');
 }
 
 .live-curation__image {

@@ -4,7 +4,9 @@ const refs = {
   openMenuBtn: document.querySelector('[mobile-menu-open]'),
   closeMenuBtn: document.querySelector('[mobile-menu-close]'),
   htmlAndBody: document.querySelectorAll('[no-scroll]'),
+  html: document.querySelector('html'),
   decorStarsContainer: document.querySelector('[decor-stars-container]'),
+  gallery: document.querySelector('[data-gallery]'),
 };
 
 // adds all elements to focus in mobile menu

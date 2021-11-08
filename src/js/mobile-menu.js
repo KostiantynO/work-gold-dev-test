@@ -6,6 +6,11 @@ import {
   refs,
 } from './menu-focus-catch.js';
 
+const options = {
+  once: true,
+  passive: true,
+};
+
 const isMenuOpen = () =>
   refs.openMenuBtn.getAttribute('aria-expanded') || false;
 
@@ -47,23 +52,14 @@ const onOpenMenuBtnClick = ({ target }) => {
 
   toggleMenu();
 
-  refs.closeMenuBtn?.addEventListener('click', onCloseMenuBtnClick, {
-    once: true,
-  });
+  refs.closeMenuBtn?.addEventListener('click', onCloseMenuBtnClick, options);
+  refs.menu?.addEventListener('click', onBackdropClick, { passive: true });
 
-  refs.menu?.addEventListener('click', onBackdropClick);
-
-  document.addEventListener('keydown', onEscCloseMenu);
+  document.addEventListener('keydown', onEscCloseMenu, { passive: true });
 
   listenOnKeydownFocusCatch();
   setTimeout(() => {
     firstFocusElem.focus();
-
-    console.log(
-      'onOpenMenuBtnClick ~ firstFocusElem',
-      firstFocusElem,
-      document.activeElement === firstFocusElem,
-    );
   }, 100);
 };
 

@@ -32,3 +32,21 @@ repo: https://github.com/KostiantynO/work-gold-dev-test
 
 2021-11-03-17:51 - 8 hours passed. (`header` - js done, started `hero` and
 `decor` - `Live curations` and `Upcomming curations`)
+
+Sat, Nov 6, 2021 13:20:40 6 days passed.
+
+#### Lefover :
+
+1. header-tagline to svg
+2. Gallery + gallery mobile
+3. Footer + footer mobile
+
+```shell
+git grep -n "const refs ="
+```
+
+```shell
+npm i @parcel/transformer-image
+npm i @parcel/resolver-glob
+npm i parcel-plugin-static-files-copy
+```
