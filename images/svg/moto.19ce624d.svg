@@ -1,0 +1,32 @@
+<svg viewBox="0 0 260 200">
+  <!-- <symbol> -->
+  <path
+    id="moto-curve"
+    fill="transparent"
+    d="
+M6,
+150C49,
+93,
+105,
+36,
+156,
+47,
+207,
+58,
+213,
+131,
+264,
+150c40,
+14,
+108-6,
+229-145
+  "
+  ></path>
+  <!-- </symbol> -->
+
+  <text id="moto-text" width="260">
+    <textPath href="#moto-curve" alignment-baseline="top">
+      The MOST INTERESTING STORE In The World
+    </textPath>
+  </text>
+</svg>
