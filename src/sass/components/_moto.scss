@@ -1,0 +1,9 @@
+.moto {
+  width: 181px;
+  height: 49px;
+
+  @include mq($tablet) {
+    width: 286px;
+    height: 79px;
+  }
+}

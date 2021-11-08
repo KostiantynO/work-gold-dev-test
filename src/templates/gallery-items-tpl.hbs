@@ -1,0 +1,15 @@
+{{#each this}}
+  <li data-idx='{{@index}}' class='gallery__item'>
+    <a class='gallery__link' href='{{original}}'>
+      <img
+        class='gallery__image lazyload'
+        sizes='(min-width: 768px) 33vw, 50vw'
+        srcset='{{preview}}, {{preview2x}} 2x'
+        src='{{preview}}'
+        alt='{{description}}'
+        loading='lazy'
+        decoding='async'
+      />
+    </a>
+  </li>
+{{/each}}

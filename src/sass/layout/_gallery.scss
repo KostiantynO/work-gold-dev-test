@@ -1,0 +1,21 @@
+.gallery__title {
+  margin-bottom: $gap;
+}
+
+.gallery__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $gap;
+}
+
+.gallery__item {
+  flex-basis: calc((100% - 2 * #{$gap}) / 3);
+}
+
+.gallery__link {
+  display: flex;
+  flex-direction: column;
+}
+
+// .gallery__image { }
