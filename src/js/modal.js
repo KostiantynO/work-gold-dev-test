@@ -1,7 +1,6 @@
 // @ts-check
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import { refs } from './menu-focus-catch.js';
 
 const initModal = galleryLinks => {
   const modalMarkup = galleryLinks;
@@ -10,14 +9,12 @@ const initModal = galleryLinks => {
     captionsData: 'alt',
     animationSpeed: 210,
     fadeSpeed: 210,
+    disableScroll: false,
+    uniqueImages: false,
   };
 
-  const modal = new SimpleLightbox(modalMarkup, modalOptions);
-
-  modal.on('show.simplelightbox', () => refs.html.classList.add('no-scroll'));
-  modal.on('close.simplelightbox', () =>
-    refs.html.classList.remove('no-scroll'),
-  );
+  const modalRef = new SimpleLightbox(modalMarkup, modalOptions);
+  return modalRef;
 };
 
 export { initModal };

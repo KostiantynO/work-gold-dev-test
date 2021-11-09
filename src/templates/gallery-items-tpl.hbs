@@ -1,15 +1,27 @@
 {{#each this}}
   <li data-idx='{{@index}}' class='gallery__item'>
+
     <a class='gallery__link' href='{{original}}'>
-      <img
-        class='gallery__image lazyload'
-        sizes='(min-width: 768px) 33vw, 50vw'
-        srcset='{{preview}}, {{preview2x}} 2x'
-        src='{{preview}}'
-        alt='{{description}}'
-        loading='lazy'
-        decoding='async'
-      />
+
+      {{!-- prettier-ignore --}}
+      <div class='gallery__thumb'>
+        <img
+          class='gallery__image lazyload'
+          sizes='(min-width: 768px) 33vw, 50vw'
+          srcset='{{preview}} {{sizes.[0]}}w, {{preview2x}} {{sizes.[1]}}w'
+          src='{{preview}}'
+          alt='{{description}}'
+          title='{{description}}'
+          loading='lazy'
+          decoding='async'
+        />
+      </div>
+
+      <h3 class='text-block title-v2 gallery__speaker-name'>
+        <span class='text-inline-block'>{{name}}</span>
+      </h3>
+
     </a>
+
   </li>
 {{/each}}
