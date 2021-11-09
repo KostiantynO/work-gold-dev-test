@@ -4,16 +4,16 @@
 
   @include mq($mobile, $tablet) {
     max-width: map-get($breakpoints, $mobile);
-    // outline: green 1px solid;
+    outline: green 1px solid;
   }
 
   @include mq($tablet, $desktop) {
     max-width: map-get($breakpoints, $tablet);
-    // outline: yellow 1px solid;
+    outline: yellow 1px solid;
   }
 
   @include mq($desktop) {
     max-width: map-get($breakpoints, $desktop);
-    // outline: red 1px solid;
+    outline: red 1px solid;
   }
 }

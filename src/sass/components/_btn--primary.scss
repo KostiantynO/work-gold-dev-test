@@ -1,6 +1,6 @@
 .btn--primary {
-  min-width: 195px;
-  min-height: 36px;
+  min-width: 190px;
+  min-height: 30px;
   padding: 6px 21px;
 
   font-family: var(--secondary-font-bold);
@@ -15,7 +15,7 @@
     min-width: 195px;
 
     color: var(--color-primary);
-    border: none;
-    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    background-color: transparent;
   }
 }
