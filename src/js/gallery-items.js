@@ -1,7 +1,7 @@
 // @ts-check
 const galleryItems = [
   {
-    preview: '../images/photos/gallery-desktop-content-01-141.jpg',
+    preview: './images/photos/gallery-desktop-content-01-141.jpg',
     preview2x: './images/photos/gallery-desktop-content-01@2x-282.jpg',
     original: './images/photos/gallery-modal-01-@4x-564w.jpg',
     description:
@@ -50,7 +50,7 @@ const galleryItems = [
   },
 
   {
-    preview: '../images/photos/gallery-desktop-content-01-141.jpg',
+    preview: './images/photos/gallery-desktop-content-01-141.jpg',
     preview2x: './images/photos/gallery-desktop-content-01@2x-282.jpg',
     original: './images/photos/gallery-modal-01-@4x-564w-copy.jpg',
     description:
