@@ -1,0 +1,116 @@
+// @use 'sass:list';
+
+.decor-svg {
+  position: absolute;
+}
+
+$path-to-sprite: '../images/svg/sprite.svg#icon-';
+$gallery-decor: (
+  1 'triangle' grey position size,
+  2 'half-square-circle' yellow position size,
+  3 'circle' pink position size,
+  4 'rounded-stick' darkgreen position size,
+  5 'star' darkblue position size,
+  6 'pentagon' orange position size,
+  7 'circle' grey position size,
+  8 'rounded-stick' lightgreen position size,
+  9 'star' gold position size,
+  10 'pentagon' darkblue position size,
+  11 'half-square-circle' orange position size,
+  12 'triangle' pink position size
+);
+
+$gallery-decor-mobile: (
+  1 'half-square-circle' yellow position size,
+  2 'circle' pink position size,
+  3 'star' darkblue position size,
+  4 'pentagon' orange position size,
+  5 'rounded-stick' lightgreen position size,
+  6 'star' gold position size,
+  7 'half-square-circle' orange position size,
+  8 'triangle' pink position size,
+  9 'half-square-circle' yellow position size,
+  10 'circle' pink position size,
+  11 'star' darkblue position size,
+  12 'pentagon' orange position size
+);
+
+/*
+  7 'circle' grey position size,
+  8 'rounded-stick' lightgreen position size,
+  9 'star' gold position size,
+  10 'pentagon' darkblue position size,
+  11 'half-square-circle' orange position size,
+  12 'triangle' grey position size */
+
+$path-to-img: '../images/photos/decor-';
+$decor-img: (
+  1 'brand-bag' 1399px 52px 86.98px 95.85px,
+  3 'light-bulb' 0px 0px 105.8px 112px,
+  5 'hand-with-magnifier' 0px 0px 138.51px 177.67px,
+  7 'juggler' 0px 0px 65.85px 148px,
+  11 'circus' 0px 0px 123px 108.88px
+);
+
+@mixin generateDecor($objMap: null, $type: null, $path: null) {
+  @for $i from 1 through length($objMap) {
+    @if (($type == 'icons') and $path) {
+      $icon-id: nth(nth($objMap, $i), 2);
+
+      .decor-icon__#{$icon-id}#{$i - 1} {
+        top: 0px;
+        left: 0px;
+        width: 50px;
+        height: 50px;
+        fill: nth(nth($objMap, $i), 3);
+      }
+    }
+
+    @if (($type == 'images') and $path) {
+      // 1 'brand-bag' 1399.12px 52px 86.98px 95.85px,
+      $decor-img: nth(nth($objMap, $i), 2);
+      $ext: '.png';
+      $ext2x: '@2x.png';
+
+      .decor-image__#{$decor-img}::after {
+        top: nth(nth($objMap, $i), 3);
+        left: nth(nth($objMap, $i), 4);
+        width: nth(nth($objMap, $i), 5);
+        height: nth(nth($objMap, $i), 6);
+
+        background: center /
+          contain
+          no-repeat
+          transparent
+          url('#{$path}#{$decor-img}#{$ext}');
+
+        @include bg-retina('#{$path}#{$decor-img}#{$ext2x}');
+      }
+    }
+  }
+}
+
+.gallery__item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+  }
+}
+
+@include generateDecor($gallery-decor, 'icons', $path-to-sprite);
+@include generateDecor($gallery-decor-mobile, 'icons', $path-to-sprite);
+@include generateDecor($decor-img, 'images', $path-to-img);
+
+// d7143a pinterest
+// 154938 darkgreen rod
+// f2cf26 yellow halfcircle --color-gold
+// fc8750 orange pentagon --color-orange
+// a5afc2 triangle #A5AFC299  --color-decor-triangle
+
+// background: rgba(165, 175, 194, 0.6);
+// background: rgba(165, 175, 194, 0.6);
+// transform: rotate(99deg);
+
+// f4bab5 circle

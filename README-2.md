@@ -43,6 +43,7 @@ Sat, Nov 6, 2021 13:20:40 6 days passed.
 
 ```shell
 git grep -n "const refs ="
+~source ~/.bash_profile
 ```
 
 ```shell
@@ -50,3 +51,55 @@ npm i @parcel/transformer-image
 npm i @parcel/resolver-glob
 npm i parcel-plugin-static-files-copy
 ```
+
+#### icons
+
+```css
+d7143a pinterest
+154938 darkgreen rod
+f2cf26 yellow halfcircle
+fc8750 orange pentagon
+a5afc2 triangle #A5AFC299
+
+background: rgba(165, 175, 194, 0.6);
+background: rgba(165, 175, 194, 0.6);
+transform: rotate(99deg);
+
+f4bab5 circle
+
+icon-burger
+icon-search
+icon-shopbag
+icon-black-heart
+icon-logo
+
+mobile:
+icon-half-square-circle: 1, 9
+icon-circle: 2, 10
+icon-star: (small bottom: 3, 11), (big top: 6)
+icon-pentagon: 4, 12
+
+icon-rounded-stick
+
+icon-triangle
+
+icon-arrow-right-slim
+icon-plus
+icon-facebook
+icon-instagram
+icon-pinterest
+icon-twitter
+```
+
+    1 triangle      grey 	  position size, 	brand-bag 	- position size
+    2 half-square   yellow 	position size
+    3 circle      	pink	  position size, 	lightbulb 	- position size
+    4	round-stick 	dgreen	position size
+    5	star		      dblue	  position size, 	glass 		  - position size
+    6	pentagon	    orange	position size
+    7	circle		    grey	  position size,	jugler		  - position size
+    8	rounded-stick	lgreen	position size
+    9	star		      gold	  position size
+    10 pentagon	    dblue	  position size
+    11 half-square  orange 	position size,  circus      - position size
+    12 triangle     grey 	  position size

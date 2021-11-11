@@ -20,9 +20,9 @@
   --color-khaki: #82a08b; // rod,
   --color-khaki-star: #80a08d; // star,
   --color-grey-star: #c9cfda; // star
-
   --color-live-indicator: #b3f695;
   --color-white: #ffffff;
+  --color-decor-triangle: #a5afc299;
 
   --time: 250ms;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
@@ -38,6 +38,9 @@ $z-index: (
   '.section__title',
   '.live-curation__thumb::before',
   '.live-curation__image',
+  '.gallery__item::before',
+  '.gallery__item',
+  '.gallery__item::after',
   '.backdrop',
   '.close-btn'
 );
