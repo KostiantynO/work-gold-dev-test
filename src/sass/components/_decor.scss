@@ -1,24 +1,172 @@
-// @use 'sass:list';
-
 .decor-svg {
   position: absolute;
 }
 
 $path-to-sprite: '../images/svg/sprite.svg#icon-';
 $gallery-decor: (
-  1 'triangle' grey position size,
-  2 'half-square-circle' yellow position size,
-  3 'circle' pink position size,
-  4 'rounded-stick' darkgreen position size,
-  5 'star' darkblue position size,
-  6 'pentagon' orange position size,
-  7 'circle' grey position size,
-  8 'rounded-stick' lightgreen position size,
-  9 'star' gold position size,
-  10 'pentagon' darkblue position size,
-  11 'half-square-circle' orange position size,
-  12 'triangle' pink position size
+  1 'triangle' rgba(165, 175, 194, 0.6) 1408 273 178 163 'rotate(99deg)',
+  2 'half-square-circle' #f2cf26 1485 638 112 223 'rotate(90deg)',
+  3 'circle' #f4bab5 1414 836 148 148,
+  4 'rounded-stick' #154938 1696 258 267 63 'rotate(49deg)',
+  5 'star' #1b2b48 1752 528 171 171 'transform: rotate(15deg)',
+  6 'pentagon' #fc8750 1886 790 171 177 'rotate(-98deg)',
+  7 'circle' #c9cfda 2055 72 148 148,
+  8 'rounded-stick' #82a08b 2027 591 63 267 'rotate(49deg)',
+  9 'star' #f2cf26 2001 846 171 171 'rotate(15deg)',
+  10 'pentagon' #1b2b48 2574 68 171 177 'rotate(-98deg)',
+  11 'half-square-circle' #fc8750 2402 641 112 223 'rotate(90deg)',
+  12 'triangle' #f4bab5 2358 1005 178 163 ' rotate(99deg)'
 );
+
+/*
+1
+decor-svg
+width: 59px;
+height: 118px;
+left: 138.5px;
+top: 1358.5px;
+
+background: #F2CF26;
+transform: rotate(90deg);
+
+2
+width: 71px;
+height: 71px;
+left: 219px;
+top: 1328px;
+
+background: #F4BAB5;
+
+3
+width: 82px;
+height: 82px;
+left: 81.01px;
+top: 1503.79px;
+
+background: #1B2B48;
+transform: rotate(15deg);
+
+4
+width: 79px;
+height: 77px;
+left: 213px;
+top: 1475px;
+
+background: #FC8750;
+
+5
+width: 34px;
+height: 143.41px;
+left: 112.05px;
+top: 1621.3px;
+
+background: #82A08B;
+transform: rotate(49deg);
+
+6
+width: 106px;
+height: 106px;
+left: 221.52px;
+top: 1601.09px;
+
+background: #F2CF26;
+transform: rotate(15deg);
+
+7
+width: 60px;
+height: 119px;
+left: 139.5px;
+top: 1818.5px;
+
+background: #FC8750;
+transform: rotate(90deg);
+
+8
+width: 103px;
+height: 94px;
+left: 313.96px;
+top: 1788.88px;
+
+background: #F4BAB5;
+transform: rotate(99deg);
+
+m    m
+09 = 1
+10 = 2
+11 = 3
+12 = 4
+
+==================================
+
+ decor-img:
+1
+width: 86.98px;
+height: 95.85px;
+left: 52px;
+top: 1399.12px;
+
+2
+width: 105.8px;
+height: 112px;
+left: 897px;
+top: 1368px;
+
+3
+width: 138.51px;
+height: 177.67px;
+left: 337.45px;
+top: 1704.33px;
+
+4
+width: 65.85px;
+height: 148px;
+left: 52px;
+top: 2024px;
+
+5
+width: 123px;
+height: 108.88px;
+left: 560px;
+top: 2343.28px;
+
+
+decor-mobile: -----------------
+
+
+1
+
+width: 47.92px;
+height: 50px;
+left: 258px;
+top: 1315px;
+
+2
+width: 65.98px;
+height: 84.84px;
+left: 2px;
+top: 1473.16px;
+
+3
+width: 60px;
+height: 53.86px;
+left: 94px;
+top: 1785.14px;
+
+4
+width: 47.92px;
+height: 50px;
+left: 260px;
+top: 1926px;
+
+5
+width: 65.98px;
+height: 84.84px;
+left: 4px;
+top: 2084.16px;
+
+
+
+*/
 
 $gallery-decor-mobile: (
   1 'half-square-circle' yellow position size,
@@ -45,7 +193,7 @@ $gallery-decor-mobile: (
 
 $path-to-img: '../images/photos/decor-';
 $decor-img: (
-  1 'brand-bag' 1399px 52px 86.98px 95.85px,
+  1 'brand-bag' -50px 52px 86.98px 95.85px,
   3 'light-bulb' 0px 0px 105.8px 112px,
   5 'hand-with-magnifier' 0px 0px 138.51px 177.67px,
   7 'juggler' 0px 0px 65.85px 148px,
@@ -55,13 +203,14 @@ $decor-img: (
 @mixin generateDecor($objMap: null, $type: null, $path: null) {
   @for $i from 1 through length($objMap) {
     @if (($type == 'icons') and $path) {
-      $icon-id: nth(nth($objMap, $i), 2);
+      $icon-id: nth(nth($objMap, $i), 2); // icon name
 
+      // 1 'triangle' rgba(165, 175, 194, 0.6) 1408 273 178 163 'rotate(99deg)',
       .decor-icon__#{$icon-id}#{$i - 1} {
-        top: 0px;
-        left: 0px;
-        width: 50px;
-        height: 50px;
+        top: nth(nth($objMap, $i), 4) * 0.001 * 1px;
+        left: nth(nth($objMap, $i), 5) * 0.01 * 1px;
+        width: nth(nth($objMap, $i), 6) * 1px;
+        height: nth(nth($objMap, $i), 7) * 1px;
         fill: nth(nth($objMap, $i), 3);
       }
     }
@@ -72,7 +221,7 @@ $decor-img: (
       $ext: '.png';
       $ext2x: '@2x.png';
 
-      .decor-image__#{$decor-img}::after {
+      .decor-image__#{$decor-img} &::after {
         top: nth(nth($objMap, $i), 3);
         left: nth(nth($objMap, $i), 4);
         width: nth(nth($objMap, $i), 5);
@@ -90,27 +239,12 @@ $decor-img: (
   }
 }
 
-.gallery__item {
-  position: relative;
+// .gallery__item { }
 
-  &::after {
-    position: absolute;
-    content: '';
-  }
+.decor-thumb {
+  // .decor-image__#{$decor-img-name} & { }
+  @include generateDecor($decor-img, 'images', $path-to-img);
 }
 
 @include generateDecor($gallery-decor, 'icons', $path-to-sprite);
-@include generateDecor($gallery-decor-mobile, 'icons', $path-to-sprite);
-@include generateDecor($decor-img, 'images', $path-to-img);
-
-// d7143a pinterest
-// 154938 darkgreen rod
-// f2cf26 yellow halfcircle --color-gold
-// fc8750 orange pentagon --color-orange
-// a5afc2 triangle #A5AFC299  --color-decor-triangle
-
-// background: rgba(165, 175, 194, 0.6);
-// background: rgba(165, 175, 194, 0.6);
-// transform: rotate(99deg);
-
-// f4bab5 circle
+// @include generateDecor($gallery-decor-mobile, 'icons', $path-to-sprite);

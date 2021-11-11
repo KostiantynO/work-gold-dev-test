@@ -38,8 +38,8 @@
 }
 
 .gallery__thumb {
+  position: relative;
   object-fit: contain;
-  contain: content;
 
   display: flex;
   flex-grow: 1;
@@ -48,16 +48,19 @@
 
   width: 77px;
   height: 95px;
-
+  padding-top: 5px;
   margin: 0 auto 10px;
 
   background-color: #e3e6ed;
 
-  padding-top: 5px;
-
   @include mq($tablet, $pt: 10px, $mb: 10px) {
     width: 161px;
     height: 195px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
   }
 }
 

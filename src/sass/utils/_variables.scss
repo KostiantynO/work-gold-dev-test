@@ -8,11 +8,11 @@
   --color-accent: #2196f3;
   --color-footer-bg: #f2f2f2;
   --color-dark-blue: #1b2b48; // star
-  --color-orange: #fc8750; // square / circle,  5edges
+  --color-orange: #fc8750; // square / circle, 5edges, pentagon
   --color-orange-star: #fb8547;
   --color-dark-green: #114837;
 
-  --color-gold: #f2cf26; //  square / circle
+  --color-gold: #f2cf26; //  square / circle / halfcircle
   --color-gold-star: #f6d500; // star
   --color-pink: #f4bab5; // circle, triangle
   --color-pink-star: #f7b8ae; // pink star
@@ -22,7 +22,9 @@
   --color-grey-star: #c9cfda; // star
   --color-live-indicator: #b3f695;
   --color-white: #ffffff;
-  --color-decor-triangle: #a5afc299;
+  --color-decor-triangle: #a5afc299; // rgba(165, 175, 194, 0.6);
+  --color-social-pinterest: #d7143a;
+  --color-darkgreen: #154938; // rod
 
   --time: 250ms;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);

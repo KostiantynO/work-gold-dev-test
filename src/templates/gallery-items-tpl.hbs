@@ -1,10 +1,16 @@
 {{#each this}}
-  <li data-idx='{{@index}}' class='gallery__item {{#if decor}} decor-image__{{decor}} {{/if}}'>
+  <li data-idx='{{@index}}' class='gallery__item {{#if decor}}decor-image__{{decor}}{{/if}}'>
 
     <a class='gallery__link' href='{{original}}'>
 
       {{!-- prettier-ignore --}}
-      <div class='gallery__thumb {{#if decor}} decor-thumb {{/if}} '>
+      <div class='gallery__thumb {{#if decor}}decor-thumb{{/if}}'>
+      {{#if icon}}
+        <svg class="decor-svg decor-icon__{{icon}}{{@index}}">
+          <use href="./images/svg/sprite.svg#icon-{{icon}}"></use>
+        </svg>
+      {{/if}}
+
         <img class='gallery__image lazyload'
           sizes='(min-width: 768px) 33vw, 50vw'
           srcset='{{preview}} {{sizes.[0]}}w, {{preview2x}} {{sizes.[1]}}w'
@@ -15,12 +21,6 @@
       <h3 class='text-block title-v2 gallery__speaker-name'>
         <span class='text-inline-block'>{{name}}</span>
       </h3>
-
-      {{#if icon}}
-        <svg class="decor-svg decor-icon__{{icon}}{{@index}}">
-          <use href="./images/svg/sprite.svg#icon-{{icon}}">      </use>
-        </svg>
-      {{/if}}
     </a>
 
   </li>

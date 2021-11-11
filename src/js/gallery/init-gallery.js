@@ -5,8 +5,8 @@ import {
   modifiedGalleryItems,
   modifiedGalleryItemsMobile,
 } from './gallery-items.js';
-import { refs } from './menu-focus-catch.js';
-import galleryItemsTpl from '../templates/gallery-items-tpl.hbs';
+import { refs } from '../refs.js';
+import galleryItemsTpl from '../../templates/gallery-items-tpl.hbs';
 import { initModal } from './modal.js';
 import debounce from 'lodash/debounce';
 
