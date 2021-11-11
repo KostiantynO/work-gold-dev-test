@@ -36,11 +36,15 @@
   width: 24px;
   height: 24px;
   transform: rotateZ(45deg);
+
+  stroke: currentColor;
 }
 
 .burger-btn__svg {
   width: 29px;
   height: 22px;
+
+  stroke: currentColor;
 
   @include mq($tablet) {
     width: 30px;
